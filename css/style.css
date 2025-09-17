@@ -1,0 +1,360 @@
+/* Importação da fonte e variáveis */
+:root {
+    --primary-color: #006400; /* Verde escuro e elegante */
+    --secondary-color: #212121; /* Cinza quase preto para textos e fundos */
+    --accent-color: #32CD32; /* Verde de destaque para botões */
+    --text-color: #424242; /* Cinza escuro para o corpo do texto */
+    --bg-color: #f5f5f5; /* Cinza claro para o fundo das seções */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--bg-color); 
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background: #fff;
+    padding: 20px 0;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 40px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0 15px;
+    font-weight: 700;
+}
+
+/* CTA Button */
+.btn-cta {
+    background: var(--accent-color);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn-cta:hover {
+    background: #228B22;
+}
+
+/* Hero Carousel Section */
+.hero-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    position: relative;
+    display: none;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+.carousel-slide img {
+    width: 100%;
+    display: block;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.banner-content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.banner-content p {
+    font-size: 1.2em;
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+/* Service Cards */
+.services-overview {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.services-overview h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+/* CTA Banner */
+.cta-banner {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.cta-banner h2 {
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background: var(--secondary-color);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .social-media a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Seção de Contato */
+.contact-section {
+    padding: 50px 0;
+}
+
+.contact-section .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.contact-form, .contact-info {
+    flex: 1;
+}
+
+.contact-form h2, .contact-info h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    margin-right: 15px;
+}
+
+/* Carrossel da Equipe */
+.team-carousel-section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.carousel-wrapper {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-container-team {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide-team {
+    min-width: 100%;
+    position: relative;
+    display: none;
+    text-align: center;
+}
+
+.carousel-slide-team.active {
+    display: block;
+}
+
+.member-card-large {
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.member-card-large img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.member-card-large h3 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.member-card-large .role {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.member-card-large .bio {
+    font-size: 1em;
+    color: var(--text-color);
+    text-align: justify;
+}
+
+/* Carrossel de Clientes */
+.clients-carousel-section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.carousel-wrapper-clients {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-container-clients {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px;
+}
+
+.carousel-slide-clients {
+    min-width: calc(33.33% - 20px);
+    text-align: center;
+}
+
+.carousel-slide-clients img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.carousel-prev-clients, .carousel-next-clients {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 10;
+}
+
+.carousel-prev-clients {
+    left: 0;
+}
+
+.carousel-next-clients {
+    right: 0;
+}
