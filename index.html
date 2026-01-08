@@ -61,18 +61,22 @@
             box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
         }
 
-        /* Garantir que as logos dos clientes tenham o mesmo tamanho */
+        /* Logos dos clientes */
         .client-logo {
-            max-height: 50px;
-            max-width: 140px;
+            max-height: 55px;
+            max-width: 160px;
             filter: grayscale(1);
             opacity: 0.6;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
         .client-logo:hover {
             filter: grayscale(0);
             opacity: 1;
-            transform: scale(1.1);
+            transform: scale(1.15);
+        }
+
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
     </style>
 </head>
@@ -87,12 +91,9 @@
     <nav class="sticky top-0 w-full z-50 border-b border-gray-100 shadow-sm">
         <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
             <div class="flex items-center gap-4">
-                <a href="#hero" class="flex items-center gap-3">
-                    <img src="Logo.png" alt="Sistema Contábil" class="h-16 w-auto object-contain">
-                    <div class="flex flex-col">
-                        <span class="font-black text-2xl tracking-tighter text-slate-900 leading-none">SISTEMA</span>
-                        <span class="font-bold text-lg tracking-[0.15em] text-green-600 leading-none mt-1 uppercase">Contábil</span>
-                    </div>
+                <a href="#hero" class="flex items-center">
+                    <!-- Apenas a logomarca para evitar redundância -->
+                    <img src="image_75a683.png" alt="Sistema Contábil" class="h-20 w-auto object-contain">
                 </a>
             </div>
             <div class="hidden lg:flex items-center gap-10 font-bold text-slate-700 text-sm uppercase tracking-widest">
@@ -249,10 +250,10 @@
         <div class="max-w-7xl mx-auto px-6">
             <h5 class="text-center text-slate-400 font-bold uppercase tracking-[0.4em] text-[10px] mb-16">Organizações geridas pelo Sistema Contábil</h5>
             <div class="flex flex-wrap justify-center items-center gap-12 md:gap-24">
-                <img src="image_75b92e.png" alt="Cliente 1" class="client-logo">
-                <img src="image_76f483.png" alt="Cliente 2" class="client-logo">
-                <img src="image_76960c.png" alt="Cliente 3" class="client-logo">
-                <img src="image_770b26.png" alt="Cliente 4" class="client-logo">
+                <img src="image_75b92e.png" alt="Pontes Life Logo" class="client-logo">
+                <img src="image_76f483.png" alt="Dr Capital Logo" class="client-logo">
+                <img src="image_76960c.png" alt="Holding Logo" class="client-logo">
+                <img src="image_770b26.png" alt="Enterprise Logo" class="client-logo">
             </div>
         </div>
     </section>
@@ -287,24 +288,24 @@
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-12">
             <div class="lg:col-span-2">
                 <div class="flex items-center gap-3 mb-8">
-                    <img src="Logo.png" alt="Logo" class="h-12 w-auto brightness-0 invert opacity-80">
+                    <img src="image_75a683.png" alt="Logo" class="h-12 w-auto brightness-0 invert opacity-80">
                 </div>
-                <p class="text-sm leading-relaxed max-w-sm">
+                <p class="text-sm leading-relaxed max-w-sm text-left">
                     <strong>SISTEMA CONTÁBIL LTDA</strong><br>
                     CNPJ: 05.530.172/0001-90<br>
                     Fundada em 05/02/2003 - Duas décadas de excelência e inovação no mercado contábil.
                 </p>
             </div>
             <div>
-                <h5 class="text-white font-black uppercase tracking-widest mb-8 text-xs">Unidade Recife</h5>
-                <p class="text-sm leading-loose">
+                <h5 class="text-white font-black uppercase tracking-widest mb-8 text-xs text-left">Unidade Recife</h5>
+                <p class="text-sm leading-loose text-left">
                     Rua Eng. Abdias de Carvalho, 809<br>
                     Recife - PE, 50.830-000
                 </p>
             </div>
             <div>
-                <h5 class="text-white font-black uppercase tracking-widest mb-8 text-xs">Contato</h5>
-                <p class="text-sm leading-loose">
+                <h5 class="text-white font-black uppercase tracking-widest mb-8 text-xs text-left">Contato</h5>
+                <p class="text-sm leading-loose text-left">
                     (81) 99980-6191<br>
                     Segunda a Sexta<br>
                     08h às 18h
